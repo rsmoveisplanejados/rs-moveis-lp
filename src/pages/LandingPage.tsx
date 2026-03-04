@@ -293,15 +293,15 @@ const Pricing = () => {
   const benefits = [
     {
       title: "PARCELAMENTO",
-      description: "EM ATÉ 18X NO CARTÃO DE CREDITO"
+      description: "Em até 18x no cartão de crédito"
     },
     {
       title: "QUALIDADE",
-      description: "100% EM MDF * 100% SOB MEDIDA"
+      description: "100% em MDF * 100% sob medida"
     },
     {
       title: "CONSULTORIA GRÁTIS",
-      description: "CONSULTORIA FOCADA EM SOLUÇÕES EM MÓVEIS SOB MEDIDA"
+      description: "Consultoria focada em soluções em móveis sob medida"
     }
   ];
 
@@ -343,10 +343,10 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 + (index * 0.1) }}
               viewport={{ once: true }}
-              className="bg-[#3f458f] rounded-2xl py-4 px-6 text-center border border-[#003031] shadow-lg"
+              className="bg-[#3f458f] rounded-2xl py-6 px-4 text-center border border-white/10 shadow-lg flex flex-col justify-center min-h-[120px]"
             >
-              <h4 className="text-white text-lg font-bold mb-1">{benefit.title}</h4>
-              <p className="text-white/80 text-[10px] md:text-sm font-light leading-tight">{benefit.description}</p>
+              <h4 className="text-white text-base md:text-lg font-bold mb-2 tracking-wider">{benefit.title}</h4>
+              <p className="text-white/90 text-xs md:text-sm font-light leading-snug">{benefit.description}</p>
             </motion.div>
           ))}
         </div>
