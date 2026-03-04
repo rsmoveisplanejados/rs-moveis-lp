@@ -92,16 +92,18 @@ export const CRMProvider = ({ children }: { children: ReactNode }) => {
     const { data, error } = await supabase
       .from('leads')
       .insert([newLead])
-      .select()
-      .single();
+      .select();
 
     if (error) {
       console.error('Error adding lead:', error);
       throw error;
-    } else if (data) {
+    } 
+    
+    if (data && data.length > 0) {
+      const insertedLead = data[0];
       const mappedLead = {
-        ...data,
-        createdAt: (data as any).created_at
+        ...insertedLead,
+        createdAt: (insertedLead as any).created_at
       } as unknown as Lead;
       setLeads((prev) => [mappedLead, ...prev]);
     }
