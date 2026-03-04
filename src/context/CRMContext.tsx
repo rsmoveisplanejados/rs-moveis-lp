@@ -89,24 +89,21 @@ export const CRMProvider = ({ children }: { children: ReactNode }) => {
       status: 'novo',
     };
 
-    const { data, error } = await supabase
+    console.log('Tentando enviar lead para o Supabase:', newLead);
+
+    // Simplificando ao máximo: removemos o .select() para evitar erros de leitura pós-escrita (RLS)
+    const { error } = await supabase
       .from('leads')
-      .insert([newLead])
-      .select();
+      .insert([newLead]);
 
     if (error) {
-      console.error('Error adding lead:', error);
+      console.error('Erro detalhado do Supabase ao adicionar lead:', error);
       throw error;
-    } 
-    
-    if (data && data.length > 0) {
-      const insertedLead = data[0];
-      const mappedLead = {
-        ...insertedLead,
-        createdAt: (insertedLead as any).created_at
-      } as unknown as Lead;
-      setLeads((prev) => [mappedLead, ...prev]);
     }
+
+    console.log('Lead enviado com sucesso para o Supabase!');
+    // Recarregamos os leads para atualizar a UI do CRM se estiver aberto
+    fetchLeads();
   };
 
   const updateLeadStatus = async (id: string, status: LeadStatus) => {
