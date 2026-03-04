@@ -45,9 +45,10 @@ const Hero = () => {
       setTimeout(() => {
         setFormStatus('idle');
       }, 5000);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Falha ao enviar lead:', error);
-      alert('Houve um erro ao enviar seu orçamento. Por favor, tente novamente ou entre em contato pelo WhatsApp.');
+      const errorMsg = error?.message || error?.details || 'Erro desconhecido';
+      alert(`Houve um erro ao enviar seu orçamento: ${errorMsg}. Por favor, tente novamente ou entre em contato pelo WhatsApp.`);
     }
   };
 
