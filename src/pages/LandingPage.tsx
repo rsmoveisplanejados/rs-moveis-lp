@@ -23,7 +23,23 @@ import bgImage from '../../public/fotoprincipal02.png';
 
 const Hero = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'success'>('idle');
+  const [phone, setPhone] = useState('');
   const { addLead } = useCRM();
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+    if (value.length > 11) value = value.slice(0, 11); // Max 11 digits
+
+    // Apply mask (XX) 9XXXX-XXXX
+    if (value.length > 2) {
+      value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+    }
+    if (value.length > 9) {
+      value = `${value.slice(0, 9)}-${value.slice(9)}`;
+    }
+
+    setPhone(value);
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -165,6 +181,8 @@ const Hero = () => {
                   <input
                     type="tel"
                     name="phone"
+                    value={phone}
+                    onChange={handlePhoneChange}
                     className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-[#004243] focus:ring-1 focus:ring-[#004243] transition-colors placeholder-gray-400 text-sm"
                     placeholder="(11) 99999-9999"
                     required
@@ -180,9 +198,11 @@ const Hero = () => {
                     <Store size={16} />
                   </div>
                   <select name="store" className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 focus:outline-none focus:border-[#004243] focus:ring-1 focus:ring-[#004243] transition-colors appearance-none text-sm" required>
-                    <option value="">Escolha uma loja</option>
-                    <option value="sp">São Paulo - Matriz</option>
-                    <option value="rj">Rio de Janeiro</option>
+                    <option value="">Opção de Metragem</option>
+                    <option value="38-42m2">38m2 a 42m2</option>
+                    <option value="45-50m2">45m2 a 50m2</option>
+                    <option value="55-65m2">55m2 a 65m2</option>
+                    <option value="70-85m2">70m2 a 85m2</option>
                   </select>
                   <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-gray-400">
                     <ChevronRight size={14} className="rotate-90" />
@@ -197,9 +217,10 @@ const Hero = () => {
                   </div>
                   <select name="investment" className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 focus:outline-none focus:border-[#004243] focus:ring-1 focus:ring-[#004243] transition-colors appearance-none text-sm" required>
                     <option value="">Investimento</option>
-                    <option value="10k">Até R$ 10.000</option>
-                    <option value="50k">R$ 10.000 a R$ 50.000</option>
-                    <option value="100k">Acima de R$ 50.000</option>
+                    <option value="12-18k">R$ 12.000 a R$ 18.000</option>
+                    <option value="18-28k">R$ 18.000 a R$ 28.000</option>
+                    <option value="28-45k">R$ 28.000 a R$ 45.000</option>
+                    <option value="45-75k">R$ 45.000 a R$ 75.000</option>
                   </select>
                   <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-gray-400">
                     <ChevronRight size={14} className="rotate-90" />
