@@ -10,6 +10,7 @@ import {
   DollarSign,
   MessageSquare,
   Layout,
+  Maximize2,
   Coffee,
   Bed,
   Utensils,
@@ -45,6 +46,13 @@ const Hero = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
+
+    // Validação rigorosa do telefone
+    const rawPhone = phone.replace(/\D/g, '');
+    if (rawPhone.length < 11) {
+      alert('Por favor, insira um número de telefone válido com 11 dígitos (DDD + número).');
+      return;
+    }
 
     try {
       await addLead({
@@ -195,10 +203,10 @@ const Hero = () => {
               <div className="space-y-1">
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
-                    <Store size={16} />
+                    <Maximize2 size={16} />
                   </div>
                   <select name="store" className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 focus:outline-none focus:border-[#004243] focus:ring-1 focus:ring-[#004243] transition-colors appearance-none text-sm" required>
-                    <option value="">Opção de Metragem</option>
+                    <option value="">Metragem</option>
                     <option value="38-42m2">38m2 a 42m2</option>
                     <option value="45-50m2">45m2 a 50m2</option>
                     <option value="55-65m2">55m2 a 65m2</option>
