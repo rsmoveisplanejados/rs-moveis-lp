@@ -94,7 +94,7 @@ const Hero = () => {
       <div className="max-w-5xl mx-auto px-6 relative z-10 w-full grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-8">
 
         {/* Removendo a faixa verde sólida que cobria metade da tela para a imagem aparecer */}
-        {/* <div className="absolute inset-y-0 w-[200vw] left-1/2 -translate-x-1/2 bg-[#004243]/95 z-[-1] shadow-2xl"></div> */}
+        {/* <div className="absolute inset-y-0 w-[200vw] left-1/2 -translate-x-1/2 bg-[#3f458f]/95 z-[-1] shadow-2xl"></div> */}
 
         <div className="relative lg:pr-8">
 
@@ -105,7 +105,7 @@ const Hero = () => {
             className="text-white py-6 relative z-10"
           >
             <div className="mb-6">
-              <img src="/logo-branca.png" alt="D'MAR Planejados" className="h-10 md:h-14 lg:h-16 w-auto object-contain" />
+              <img src="/logofundobrancors.png" alt="D'MAR Planejados" className="h-10 md:h-14 lg:h-16 w-auto object-contain" />
             </div>
 
             <h1 className="mb-4 text-white flex flex-col gap-1">
@@ -131,7 +131,7 @@ const Hero = () => {
         >
           <div className="text-center mb-6">
             <h3 className="text-2xl text-gray-900 font-medium mb-1">
-              Solicite seu <span className="text-[#004243] font-bold">Orçamento</span>
+              Solicite seu <span className="text-[#3f458f] font-bold">Orçamento</span>
             </h3>
             <p className="text-gray-500 text-xs">Visualize seu projeto em <span className="font-bold text-gray-800">24H</span></p>
           </div>
@@ -156,7 +156,7 @@ const Hero = () => {
                 <input
                   type="text"
                   name="name"
-                  className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-[#004243] focus:ring-1 focus:ring-[#004243] transition-colors placeholder-gray-400 text-sm"
+                  className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-[#3f458f] focus:ring-1 focus:ring-[#3f458f] transition-colors placeholder-gray-400 text-sm"
                   placeholder="Seu nome completo"
                   required
                 />
@@ -173,7 +173,7 @@ const Hero = () => {
                   <input
                     type="email"
                     name="email"
-                    className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-[#004243] focus:ring-1 focus:ring-[#004243] transition-colors placeholder-gray-400 text-sm"
+                    className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-[#3f458f] focus:ring-1 focus:ring-[#3f458f] transition-colors placeholder-gray-400 text-sm"
                     placeholder="seu@email.com"
                     required
                   />
@@ -191,7 +191,7 @@ const Hero = () => {
                     name="phone"
                     value={phone}
                     onChange={handlePhoneChange}
-                    className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-[#004243] focus:ring-1 focus:ring-[#004243] transition-colors placeholder-gray-400 text-sm"
+                    className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-[#3f458f] focus:ring-1 focus:ring-[#3f458f] transition-colors placeholder-gray-400 text-sm"
                     placeholder="(11) 99999-9999"
                     required
                   />
@@ -205,7 +205,7 @@ const Hero = () => {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
                     <Maximize2 size={16} />
                   </div>
-                  <select name="store" className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 focus:outline-none focus:border-[#004243] focus:ring-1 focus:ring-[#004243] transition-colors appearance-none text-sm" required>
+                  <select name="store" className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 focus:outline-none focus:border-[#3f458f] focus:ring-1 focus:ring-[#3f458f] transition-colors appearance-none text-sm" required>
                     <option value="">Metragem</option>
                     <option value="38-42m2">38m2 a 42m2</option>
                     <option value="45-50m2">45m2 a 50m2</option>
@@ -223,7 +223,7 @@ const Hero = () => {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
                     <DollarSign size={16} />
                   </div>
-                  <select name="investment" className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 focus:outline-none focus:border-[#004243] focus:ring-1 focus:ring-[#004243] transition-colors appearance-none text-sm" required>
+                  <select name="investment" className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 focus:outline-none focus:border-[#3f458f] focus:ring-1 focus:ring-[#3f458f] transition-colors appearance-none text-sm" required>
                     <option value="">Investimento</option>
                     <option value="12-18k">R$ 12.000 a R$ 18.000</option>
                     <option value="18-28k">R$ 18.000 a R$ 28.000</option>
@@ -246,7 +246,7 @@ const Hero = () => {
                 <textarea
                   name="environments"
                   rows={2}
-                  className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-[#004243] focus:ring-1 focus:ring-[#004243] transition-colors placeholder-gray-400 resize-none text-sm"
+                  className="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-[#3f458f] focus:ring-1 focus:ring-[#3f458f] transition-colors placeholder-gray-400 resize-none text-sm"
                   placeholder="Ex: Cozinha, Sala, Dormitório..."
                   required
                 ></textarea>
@@ -255,7 +255,7 @@ const Hero = () => {
 
             <button
               type="submit"
-              className="w-full bg-[#004243] text-white font-bold py-3.5 rounded-lg hover:bg-[#003031] transition-colors mt-2 tracking-wider text-sm shadow-md"
+              className="w-full bg-[#3f458f] text-white font-bold py-3.5 rounded-lg hover:bg-[#003031] transition-colors mt-2 tracking-wider text-sm shadow-md"
             >
               ENVIAR SOLICITAÇÃO
             </button>
@@ -343,7 +343,7 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 + (index * 0.1) }}
               viewport={{ once: true }}
-              className="bg-[#004243] rounded-2xl p-6 text-center border border-[#003031] shadow-lg"
+              className="bg-[#3f458f] rounded-2xl p-6 text-center border border-[#003031] shadow-lg"
             >
               <h4 className="text-white text-xl font-bold mb-2">{benefit.title}</h4>
               <p className="text-white/80 text-sm font-light">{benefit.description}</p>
@@ -357,7 +357,7 @@ const Pricing = () => {
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-[#004243] text-white overflow-hidden">
+    <section id="about" className="py-20 bg-[#3f458f] text-white overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -507,7 +507,7 @@ const Footer = () => {
     <footer className="py-12 bg-[#0A0A0A] border-t border-white/5">
       <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         <div>
-          <img src="/logo-branca.png" alt="D'MAR Planejados" className="h-8 md:h-10 w-auto opacity-90 object-contain" />
+          <img src="/logofundobrancors.png" alt="D'MAR Planejados" className="h-8 md:h-10 w-auto opacity-90 object-contain" />
         </div>
         <div className="text-xs text-gray-500 font-light">
           © {new Date().getFullYear()} D'Mar Móveis Planejados. Todos os direitos reservados.
