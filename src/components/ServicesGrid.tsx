@@ -11,7 +11,7 @@ export default function ServicesGrid() {
     ];
 
     return (
-        <section id="ambientes" className="py-16 bg-[#0A0A0A]">
+        <section id="ambientes" className="py-16 bg-[#1a1a1a]">
             <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
                 <div className="text-left mb-12">
                     <motion.p
