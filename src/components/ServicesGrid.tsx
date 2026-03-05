@@ -50,13 +50,13 @@ export default function ServicesGrid() {
                                 alt={env.title}
                                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 group-hover:blur-sm"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#101010]/95 via-black/20 to-transparent flex flex-col justify-end items-center p-6 text-center transition-all duration-500 group-hover:bg-black/40">
-                                <h3 className="text-xl md:text-2xl text-white font-medium tracking-[0.15em] md:tracking-[0.2em] transform transition-transform duration-500 group-hover:-translate-y-16">
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#101010]/95 via-black/20 to-transparent flex flex-col justify-end items-center p-6 text-center transition-all duration-500 group-hover:bg-black/50">
+                                <h3 className="text-lg md:text-xl text-white font-light tracking-[0.2em] md:tracking-[0.25em] uppercase transform transition-transform duration-500 group-hover:-translate-y-[4.5rem]">
                                     {env.title}
                                 </h3>
 
-                                <div className="absolute bottom-8 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                                    <span className="inline-block border border-white/40 text-white/90 px-8 py-3 text-xs md:text-sm font-light tracking-[0.15em] hover:bg-white hover:text-black hover:border-white transition-all duration-300">
+                                <div className="absolute bottom-6 left-6 right-6 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                                    <span className="block w-full border border-white/40 text-white/90 py-3 text-xs font-light tracking-[0.2em] uppercase hover:bg-white hover:text-black hover:border-white transition-all duration-300">
                                         VER AMBIENTES
                                     </span>
                                 </div>
