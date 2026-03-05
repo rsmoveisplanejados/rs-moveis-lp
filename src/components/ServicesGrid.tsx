@@ -5,10 +5,10 @@ import { ArrowRight } from 'lucide-react';
 export default function ServicesGrid() {
     const environments = [
         { title: "Closets", img: "/fotoprincipal02.png" },
-        { title: "Cozinhas", img: "/fotoprincipal02.png" },
-        { title: "Salas", img: "/fotoprincipal02.png" },
-        { title: "Dormitórios", img: "/fotoprincipal02.png" },
-        { title: "Corporativo", img: "/fotoprincipal02.png" },
+        { title: "Cozinhas", img: "/planosrsplanejadosPrancheta-1.png" },
+        { title: "Salas", img: "/planosrsplanejadosPrancheta-3.png" },
+        { title: "Dormitórios", img: "/planosrsplanejadosPrancheta-2.png" },
+        { title: "Corporativo", img: "/planosrsplanejadosPrancheta-4.png" },
     ];
 
     return (
@@ -43,7 +43,7 @@ export default function ServicesGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative overflow-hidden aspect-[3/6] cursor-pointer"
+                            className="group relative overflow-hidden aspect-[1/2] cursor-pointer"
                         >
                             <img
                                 src={env.img}
