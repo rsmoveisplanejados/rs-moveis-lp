@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
+import HomePage from './pages/HomePage';
 import { CRMProvider } from './context/CRMContext';
 
 export default function App() {
@@ -7,7 +8,8 @@ export default function App() {
     <CRMProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/lp" element={<LandingPage />} />
         </Routes>
       </Router>
     </CRMProvider>
