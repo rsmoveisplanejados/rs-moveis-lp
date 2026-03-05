@@ -11,29 +11,30 @@ export default function ServicesGrid() {
     ];
 
     return (
-        <section id="ambientes" className="py-24 bg-[#0A0A0A]">
+        <section id="ambientes" className="py-16 bg-[#0A0A0A]">
             <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-                <div className="text-center mb-16">
+                <div className="text-left mb-12">
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-brand-accent tracking-[0.2em] text-sm uppercase mb-2 font-medium"
+                        className="text-gray-400 tracking-[0.3em] text-xs uppercase mb-3 font-medium"
                     >
-                        Soluções Completas
+                        Conheça
                     </motion.p>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-3xl md:text-5xl font-light text-white"
+                        className="text-2xl md:text-3xl font-light text-white tracking-widest uppercase mb-4"
                     >
-                        Especialistas em <span className="font-bold">Todos os Ambientes</span>
+                        Nossos Ambientes
                     </motion.h2>
+                    <div className="h-0.5 w-16 bg-brand-accent"></div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
                     {environments.map((env, index) => (
                         <motion.div
                             key={env.title}
@@ -41,23 +42,18 @@ export default function ServicesGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative overflow-hidden rounded-xl aspect-video md:aspect-[16/9] cursor-pointer"
+                            className="group relative overflow-hidden rounded-sm aspect-[3/4] md:aspect-[2/3] cursor-pointer"
                         >
                             <img
                                 src={env.img}
                                 alt={env.title}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8 transition-opacity duration-300">
-                                <h3 className="text-2xl md:text-3xl text-white font-light tracking-wide mb-2">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-6 transition-all duration-300">
+                                <h3 className="text-lg md:text-xl text-white font-medium tracking-[0.2em] uppercase text-center mb-2 transform transition-transform duration-500 group-hover:-translate-y-2">
                                     {env.title}
                                 </h3>
-                                <p className="text-gray-300 font-light mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">
-                                    {env.desc}
-                                </p>
-                                <div className="flex items-center text-brand-accent text-sm tracking-widest uppercase font-medium mt-auto opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                                    Ver Projetos <ArrowRight size={16} className="ml-2" />
-                                </div>
+                                <div className="h-0.5 w-12 bg-brand-accent mx-auto scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
                             </div>
                         </motion.div>
                     ))}
