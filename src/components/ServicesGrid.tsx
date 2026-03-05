@@ -12,7 +12,7 @@ export default function ServicesGrid() {
 
     return (
         <section id="ambientes" className="py-24 bg-[#0A0A0A]">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
                 <div className="text-center mb-16">
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}

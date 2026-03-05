@@ -18,7 +18,7 @@ export default function HomeHero() {
                 <div className="absolute inset-0 bg-black/40 transition-all duration-700 group-hover:bg-black/60"></div>
             </div>
 
-            <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <div className="relative z-10 text-center px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

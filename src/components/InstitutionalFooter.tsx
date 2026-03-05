@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function InstitutionalFooter() {
     return (
         <footer className="bg-[#050505] pt-20 pb-10 border-t border-white/10 text-gray-400 font-light">
-            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                 {/* Brand */}
                 <div>
@@ -68,7 +68,7 @@ export default function InstitutionalFooter() {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
                 <p>© {new Date().getFullYear()} RS Móveis Planejados. Todos os direitos reservados.</p>
                 <div className="flex gap-4">
                     <a href="#" className="hover:text-gray-400">Política de Privacidade</a>

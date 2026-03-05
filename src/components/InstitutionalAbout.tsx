@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 export default function InstitutionalAbout() {
     return (
         <section id="sobre" className="py-24 bg-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 grid lg:grid-cols-2 gap-16 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
