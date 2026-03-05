@@ -13,12 +13,12 @@ export default function HomeHero() {
                     transition={{ duration: 1.5, ease: "easeOut" }}
                     src={bgImage}
                     alt="Ambiente de Luxo RS Móveis"
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:brightness-50"
+                    className="w-full h-full object-cover transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0A0A0A] transition-all duration-700 group-hover:bg-black/40"></div>
+                <div className="absolute inset-0 bg-black/40 transition-all duration-700 group-hover:bg-black/60"></div>
             </div>
 
-            <div className="relative z-10 text-center px-6 mt-16 max-w-4xl mx-auto">
+            <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
