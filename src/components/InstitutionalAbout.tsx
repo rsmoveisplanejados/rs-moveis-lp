@@ -17,7 +17,7 @@ export default function InstitutionalAbout() {
                         alt="Essência RS Móveis"
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-[#C5A059]/10 mix-blend-overlay"></div>
+                    <div className="absolute inset-0 bg-[#3f458f]/10 mix-blend-overlay"></div>
                 </motion.div>
 
                 <motion.div
