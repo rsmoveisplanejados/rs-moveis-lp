@@ -43,7 +43,7 @@ export default function ServicesGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative overflow-hidden aspect-[3/4] cursor-pointer"
+                            className="group relative overflow-hidden aspect-[3/6] cursor-pointer"
                         >
                             <img
                                 src={env.img}
