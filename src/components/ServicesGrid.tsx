@@ -4,10 +4,11 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ServicesGrid() {
     const environments = [
+        { title: "Closets", desc: "Organização e design sob medida.", img: "/fotoprincipal02.png" },
         { title: "Cozinhas", desc: "O coração da casa com design funcional.", img: "/planosrsplanejadosPrancheta-1.png" },
-        { title: "Dormitórios", desc: "Refúgios de conforto e intimidade.", img: "/planosrsplanejadosPrancheta-2.png" },
         { title: "Salas", desc: "Elegância para receber com estilo.", img: "/planosrsplanejadosPrancheta-3.png" },
-        { title: "Home Office", desc: "Produtividade com sofisticação.", img: "/planosrsplanejadosPrancheta-4.png" },
+        { title: "Dormitórios", desc: "Refúgios de conforto.", img: "/planosrsplanejadosPrancheta-2.png" },
+        { title: "Corporativo", desc: "Produtividade com sofisticação.", img: "/planosrsplanejadosPrancheta-4.png" },
     ];
 
     return (
@@ -34,7 +35,7 @@ export default function ServicesGrid() {
                     <div className="h-0.5 w-16 bg-brand-accent"></div>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
                     {environments.map((env, index) => (
                         <motion.div
                             key={env.title}
@@ -59,11 +60,7 @@ export default function ServicesGrid() {
                     ))}
                 </div>
 
-                <div className="mt-16 text-center">
-                    <a href="/lp" className="inline-flex items-center gap-2 text-white border-b border-brand-accent pb-1 hover:text-brand-accent transition-colors font-light tracking-wide">
-                        Deseja mobiliar o apartamento completo? Conheça nossos planos especiais <ArrowRight size={16} />
-                    </a>
-                </div>
+
             </div>
         </section>
     );
