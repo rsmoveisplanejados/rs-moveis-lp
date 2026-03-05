@@ -24,8 +24,8 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed w-full z-50 transition-all duration-300 ${isScrolled
-                ? 'bg-black/95 backdrop-blur-md py-2 shadow-xl'
-                : 'bg-black/80 backdrop-blur-sm py-3'
+                ? 'bg-black/95 backdrop-blur-md py-3 shadow-xl'
+                : 'bg-gradient-to-b from-black/80 to-transparent py-5'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -33,7 +33,7 @@ export default function Navbar() {
                     <img
                         src="/logofundobrancors.png"
                         alt="RS Móveis Planejados"
-                        className="h-8 md:h-10 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                        className="h-10 md:h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                 </Link>
 
