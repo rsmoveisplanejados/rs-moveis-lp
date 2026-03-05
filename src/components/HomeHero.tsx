@@ -24,15 +24,11 @@ export default function HomeHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
                 >
-                    <p className="text-brand-accent text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-medium">
-                        Exclusividade e Sofisticação
-                    </p>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl text-white font-light leading-tight mb-6">
-                        Projetando <span className="font-bold">Sonhos</span>,<br />
-                        Construindo <span className="font-bold">Histórias</span>.
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-light leading-tight mb-6 uppercase">
+                        MÓVEIS PLANEJADOS <span className="font-bold text-[#3f458f]">EXCLUSIVAMENTE PARA VOCÊ</span>
                     </h1>
                     <p className="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10">
-                        Móveis planejados de alto padrão que transformam espaços em verdadeiras obras de arte, refletindo sua essência em cada detalhe.
+                        Há 15 anos, transformando espaços com sofisticação e praticidade.
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -41,12 +37,6 @@ export default function HomeHero() {
                             className="bg-brand-accent text-black px-8 py-4 rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300"
                         >
                             Nossos Projetos
-                        </a>
-                        <a
-                            href="/lp"
-                            className="border border-white/30 text-white px-8 py-4 rounded-full font-bold tracking-widest uppercase hover:bg-white/10 transition-all duration-300"
-                        >
-                            Ver Promoções
                         </a>
                     </div>
                 </motion.div>
