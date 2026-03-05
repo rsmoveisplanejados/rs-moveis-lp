@@ -4,11 +4,11 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ServicesGrid() {
     const environments = [
-        { title: "Closets", desc: "Organização e design sob medida.", img: "/fotoprincipal02.png" },
-        { title: "Cozinhas", desc: "O coração da casa com design funcional.", img: "/planosrsplanejadosPrancheta-1.png" },
-        { title: "Salas", desc: "Elegância para receber com estilo.", img: "/planosrsplanejadosPrancheta-3.png" },
-        { title: "Dormitórios", desc: "Refúgios de conforto.", img: "/planosrsplanejadosPrancheta-2.png" },
-        { title: "Corporativo", desc: "Produtividade com sofisticação.", img: "/planosrsplanejadosPrancheta-4.png" },
+        { title: "Closets", img: "/fotoprincipal02.png" },
+        { title: "Cozinhas", img: "/fotoprincipal02.png" },
+        { title: "Salas", img: "/fotoprincipal02.png" },
+        { title: "Dormitórios", img: "/fotoprincipal02.png" },
+        { title: "Corporativo", img: "/fotoprincipal02.png" },
     ];
 
     return (
@@ -35,7 +35,7 @@ export default function ServicesGrid() {
                     <div className="h-0.5 w-16 bg-brand-accent"></div>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
                     {environments.map((env, index) => (
                         <motion.div
                             key={env.title}
@@ -43,18 +43,23 @@ export default function ServicesGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative overflow-hidden rounded-sm aspect-[3/4] md:aspect-[2/3] cursor-pointer"
+                            className="group relative overflow-hidden rounded-md aspect-[9/16] md:aspect-[1/2] cursor-pointer"
                         >
                             <img
                                 src={env.img}
                                 alt={env.title}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-6 transition-all duration-300">
-                                <h3 className="text-lg md:text-xl text-white font-medium tracking-[0.2em] uppercase text-center mb-2 transform transition-transform duration-500 group-hover:-translate-y-2">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end items-center p-6 text-center transition-all duration-500">
+                                <h3 className="text-base md:text-lg text-white font-medium tracking-[0.15em] uppercase mb-4 transform transition-transform duration-500 group-hover:-translate-y-4">
                                     {env.title}
                                 </h3>
-                                <div className="h-0.5 w-12 bg-brand-accent mx-auto scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+
+                                <div className="absolute bottom-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                                    <span className="inline-block border border-white/50 bg-black/40 text-white px-4 py-2 text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-colors rounded-sm backdrop-blur-sm">
+                                        Ver Galeria
+                                    </span>
+                                </div>
                             </div>
                         </motion.div>
                     ))}
