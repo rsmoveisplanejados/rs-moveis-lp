@@ -17,8 +17,8 @@ export default function Navbar() {
 
     const navLinks = [
         { name: 'Início', path: '/' },
-        { name: 'Essência', path: '/#sobre' },
         { name: 'Ambientes', path: '/#ambientes' },
+        { name: 'Essência', path: '/#sobre' },
     ];
 
     return (

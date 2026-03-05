@@ -12,8 +12,8 @@ export default function HomePage() {
             <Navbar />
             <main>
                 <HomeHero />
-                <InstitutionalAbout />
                 <ServicesGrid />
+                <InstitutionalAbout />
             </main>
             <InstitutionalFooter />
             <WhatsAppButton />
