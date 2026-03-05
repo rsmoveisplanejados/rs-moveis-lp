@@ -24,35 +24,24 @@ export default function HomeHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
                 >
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-light leading-tight mb-6 uppercase">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl text-white font-light leading-tight mb-4 uppercase">
                         MÓVEIS PLANEJADOS <br />
                         <span className="font-bold text-white">EXCLUSIVAMENTE PARA VOCÊ</span>
                     </h1>
-                    <p className="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10">
+                    <p className="text-gray-300 text-base md:text-lg font-light max-w-2xl mx-auto mb-8">
                         Há 15 anos, transformando espaços com sofisticação e praticidade.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row justify-center gap-4">
+                    <div className="flex justify-center">
                         <a
                             href="#ambientes"
-                            className="bg-brand-accent text-white px-8 py-4 rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-[#3f458f] transition-all duration-300"
+                            className="bg-brand-accent text-white px-6 py-3 rounded-full text-sm font-bold tracking-widest uppercase hover:bg-white hover:text-[#3f458f] transition-all duration-300"
                         >
                             Nossos Projetos
                         </a>
                     </div>
                 </motion.div>
             </div>
-
-            <motion.div
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-white/50 animate-bounce"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5 }}
-            >
-                <a href="#sobre">
-                    <ChevronDown size={32} />
-                </a>
-            </motion.div>
         </section>
     );
 }
